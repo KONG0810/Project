@@ -47,11 +47,13 @@
         WHERE   sno = #{sno};
     </update>
 
-    <delete id="deleteStudents" parameterType="String">
-        DELETE FROM students
-        WHERE sno = #{sno};
+    <select id="deleteStudents" resultMap="BaseResultMap">
+        SELECT * FROM students;
+    </select>
+
+    <delete id="deleteStudent" parameterType="string">
+        delete from students
+        where sno = #{studentId}
     </delete>
-
-
 
 </mapper>

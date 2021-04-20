@@ -24,5 +24,10 @@ public interface StudentsMapper {
     int updateStudents(Students students);
 
     // 削除
-    int deleteStudents(String sno);
+    List<Students> deleteStudents();
+
+    // 根据id删除单个学生
+    StudentDetail deleteStudent(String studentId);
+
+
 }

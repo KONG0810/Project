@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="zh-cmn-Hans">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>信息照会</title>
 </head>
 <body>
-<a href="/students/getStudents">查询Students</a>
-<a href="/teachers/getTeachers">查询Teachers</a>
-<a href="/courses/getCourses">查询Courses</a>
-<a href="/scores/getScores">查询Scores</a>
+<b><t>信息照会</t></b>
+<table border="1">
+    <tr>
+        <th>Table</th>
+        <th colspan="4">选项</th>
+    </tr>
+    <tr>
+        <td>courses</td>
+        <td><a href="/courses/getCourses"><button type="button" value="Select" target="_blank"/>Select</a></td>
+        <td><a href="./insert/Courses.html"><button type="button" value="Insert" target="_blank"/>Insert</a></td>
+        <td><a href="./update/Courses.html"><button type="button" value="Update" target="_blank"/>Update</a></td>
+        <td><a href="./delete/Courses.html"><button type="button" value="Delete" target="_blank"/>Delete</a></td>
+    </tr>
+    <tr>
+        <td>scores</td>
+        <td><a href="/scores/getScores"><button type="button" value="Select" target="_blank"/>Select</a></td>
+        <td><a href="./insert/Scores.html"><button type="button" value="Insert" target="_blank"/>Insert</a></td>
+        <td><a href="./update/Scores.html"><button type="button" value="Update" target="_blank"/>Update</a></td>
+        <td><a href="./delete/Scores.html"><button type="button" value="Delete" target="_blank"/>Delete</a></td>
+    </tr>
+    <tr>
+        <td>students</td>
+        <td><a href="/students/getStudents"><button type="button" value="Select" target="_blank"/>Select</a></td>
+        <td><a href="./insert/Students.html"><button type="button" value="Insert" target="_blank"/>Insert</a></td>
+        <td><a href="./update/Students.html"><button type="button" value="Update" target="_blank"/>Update</a></td>
+        <td><a href="/students/deleteStudents"><button type="button" value="Delete" target="_blank"/>Delete</a></td>
+    </tr>
+    <tr>
+        <td>teachers</td>
+        <td><a href="/teachers/getTeachers"><button type="button" value="Select" target="_blank"/>Select</a></td>
+        <td><a href="./insert/Teachers.html"><button type="button" value="Insert" target="_blank"/>Insert</a></td>
+        <td><a href="./update/Teachers.html"><button type="button" value="Update" target="_blank"/>Update</a></td>
+        <td><a href="./delete/Teachers.html"><button type="button" value="Delete" target="_blank"/>Delete</a></td>
+    </tr>
+</table>
+
 </body>
 </html>

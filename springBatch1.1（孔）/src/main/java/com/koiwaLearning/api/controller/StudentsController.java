@@ -32,9 +32,7 @@ public class StudentsController {
         return new ModelAndView("students/studentsSelect","studentsModel",model);
     }
 
-    /**
-     * 查询学生
-     */
+    //查询学生
     @RequestMapping(value = "/getStudent", method = RequestMethod.GET)
     public StudentDetail getStudent(@RequestParam("studentId") String studentId) {
 
@@ -68,9 +66,21 @@ public class StudentsController {
     }
 
     // 削除
-    @RequestMapping(value = {"/students/delete"}, method = RequestMethod.GET)
-    public int deleteStudents() {
-        String sno = "123";
-        return studentsService.deleteStudents(sno);
+    @RequestMapping(value = {"/deleteStudents"}, method = RequestMethod.GET)
+    public ModelAndView deleteStudents(Model model) {
+        model.addAttribute("studentsList",studentsService.deleteStudents());
+        model.addAttribute("title", "学生信息");
+        return new ModelAndView("students/studentsDelete","studentsModel",model);
     }
+
+
+    //删除学生
+    @RequestMapping(value = "/deleteStudent", method = RequestMethod.GET)
+    public StudentDetail deleteStudent(@RequestParam("studentId") String studentId) {
+
+        StudentDetail student = studentsService.deleteStudent(studentId);
+
+        return student;
+    }
+
 }

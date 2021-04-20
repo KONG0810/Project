@@ -36,7 +36,13 @@ public class StudentsService {
     }
 
     // 削除
-    public int deleteStudents(String sno) {
-        return studentsMapper.deleteStudents(sno);
+    public List<Students> deleteStudents() {
+        return studentsMapper.deleteStudents();
     }
+
+    // 根据id删除一个学生
+    public StudentDetail deleteStudent(String studentId) {
+        return studentsMapper.deleteStudent(studentId);
+    }
+
 }
